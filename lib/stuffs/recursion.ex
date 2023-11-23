@@ -1,18 +1,12 @@
 defmodule Stuffs.Recursion do
   def sum([]), do: 0
-
-  def sum([head | tail]) do
-    head + sum(tail)
-  end
+  def sum([head | tail]), do: head + sum(tail)
 
   def count([]), do: 0
-
-  def count([_h | t]) do
-    1 + count(t)
-  end
+  def count([_h | t]), do: 1 + count(t)
 
   def format_list_of_strings([]), do: []
-
+  #
   def format_list_of_strings([head | tail]) do
     [head |> String.replace(" ", "--") |> String.capitalize()] ++ format_list_of_strings(tail)
   end
