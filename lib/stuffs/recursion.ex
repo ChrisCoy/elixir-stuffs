@@ -5,6 +5,10 @@ defmodule Stuffs.Recursion do
   def count([]), do: 0
   def count([_h | t]), do: 1 + count(t)
 
+  def fibonacci(0), do: 0
+  def fibonacci(1), do: 1
+  def fibonacci(n), do: fibonacci(n - 1) + fibonacci(n - 2)
+
   def format_list_of_strings([]), do: []
   #
   def format_list_of_strings([head | tail]) do
